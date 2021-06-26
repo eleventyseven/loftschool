@@ -39,6 +39,12 @@
       transform: translate(-50%, -50%) rotate(-180deg);
     }
   }
+  &:hover {
+    background-color: $text-color;
+    &:before{
+      background: svg-load('arrow-down.svg', fill=#222427) center center / contain no-repeat;
+    }
+  }
 }
 
 .reviews__content {
