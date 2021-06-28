@@ -2,6 +2,10 @@
   position: relative;
   width: 166px;
   height: 166px;
+  @include tablets {
+    width: 135px;
+    height: 135px;
+  }
 }
 
 .skill__circle {
@@ -26,10 +30,19 @@
   font-size: 18px;
   color: rgba($text-color, .5);
   padding: 14px;
+  @include phones {
+    font-size: 16px;
+  }
 }
 
 .skills__item {
   margin-bottom: 30px;
+}
+
+.skills {
+  @include phones {
+    text-align: center;
+  }
 }
 
 .skills-row__title {
@@ -42,6 +55,9 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: -4%;
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .skills-row__item {

@@ -3,3 +3,24 @@
     justify-content: space-between;
     align-items: center;
 }
+.header__menu {
+    width: 55%;
+
+    @include tablets {
+        display: none;
+    }
+}
+.header__buttons {
+    @include phones {
+        display: none;
+    }
+}
+.menu-mobile__icon {
+    display: none;
+    @include phones {
+        display: block;
+        width: 29.6px;
+        height: 24.67px;
+        fill: $text-color;
+    }
+}

@@ -2,18 +2,31 @@
   background: url('~images/bg/budda.jpg') top right 53% / cover no-repeat;
   padding-top: 253px;
   padding-bottom: 135px;
-
+  @include phones {
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
 }
 
 .contacts__about {
   padding-left: 14%;
   margin-bottom: 190px;
+  @include phones {
+    margin-bottom: 0;
+    padding: 5% 0 0;
+  }
 }
 
 .contacts__container {
   padding-right: 26%;
+  @include tablets {
+    padding-right: 0;
+  }
 }
 
 .contacts__form {
   width: 89%;
+  @include tablets {
+    width: 100%;
+  }
 }

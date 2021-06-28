@@ -1,40 +1,63 @@
 .footer {
   background: #1f232d;
   padding: 88px 0;
-  color: rgba(#fff, .3);
+  color: rgba(#fff);
   line-height: 1.7;
+  @include tablets {
+    padding: 50px 0;
+  }
 }
 
 .footer__container {
   display: flex;
   justify-content: space-between;
+  @include phones {
+    flex-direction: column;
+    padding: 0;
+  }
 }
 
 .footer__copyright {
 
   display: flex;
-  color: rgba(#fff, .1);
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 20%;
+  color: rgba(#fff);
+  @include desktop {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 20%;
+  }
+  @include tablets {
+    width: 30%;
+  }
+  @include phones {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 .footer__copyright-col {
   flex: 1;
+  @include tablets {
+    flex: initial;
+  }
 }
 
 .footer__copyright-userinfo {
-  width: 100%;
+  @include desktop {
+    width: 100%;
+  }
   padding-top: 9px;
 }
 
 .footer__copyright-name {
   text-transform: uppercase;
-  margin-bottom: 18px;
   color: #fff;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 34px;
+  @include phones {
+    margin-bottom: 7px;
+  }
 }
 
 .footer__copyright-year {
@@ -45,28 +68,74 @@
 
 .footer__data-text {
   margin-bottom: 25px;
+  @include phones {
+    margin-bottom: 15px;
+    color: #fff;
+    opacity: .3;
+  }
 }
 
 .footer__data {
-  width: 75%;
+  @include desktop {
+    width: 75%;
+  }
+  @include tablets {
+    width: 60%;
+  }
+  @include phones {
+    width: 100%;
+  }
   padding-top: 7px;
 }
 
 .footer__data-menu {
   margin-bottom: 60px;
+  @include tablets {
+    margin-bottom: 30px;
+  }
   .menu__list {
     justify-content: flex-start;
+    @include tablets {
+      flex-wrap: wrap;
+    }
+    @include phones {
+      flex-direction: row-reverse;
+    }
   }
   .menu__item {
     margin-right: 6%;
+    @include tablets {
+      margin-bottom: 32px;
+    }
+    @include phones {
+      width: 50%;
+      margin-right: 0;
+      color: #fff;
+    }
   }
 }
 
 .footer__data-content {
   display: flex;
   justify-content: space-between;
+  @include tablets {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .footer__data-col {
   width: 46%;
+  @include tablets {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  @include phones {
+    margin-bottom: 45px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
